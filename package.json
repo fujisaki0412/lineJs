@@ -1,0 +1,16 @@
+{
+  "name": "linejs",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "dependencies": {
+    "thrift": "^0.11.0",
+    "thrift-http": "^1.0.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "start": "node src/main.js"
+  },
+  "author": "",
+  "license": "ISC"
+}

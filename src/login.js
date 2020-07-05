@@ -16,14 +16,13 @@ module.exports = class Line {
     } 
     this.options = {
       protocol: thrift.TCompactProtocol,
-      transport: thrift.TTransport,
+      transport: thrift.TBufferedTransport,
       headers: this.headers,
       path: path,
       https: true
     }
     this.connection = thrift.createHttpConnection(config.LINE_HOST_DOMAIN, 443, this.options);
     this.connection.on('error', (err) => {
-      console.log('err',err);
       return err;
     });
     return thrift.createHttpClient(TalkService, this.connection);
